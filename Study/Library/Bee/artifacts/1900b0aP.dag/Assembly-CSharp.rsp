@@ -308,8 +308,10 @@
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.VisualScripting.Flow.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.VisualScripting.State.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/UnityEngine.UI.ref.dll"
-"Assets/Scripts/2022.09.15/Map.cs"
-"Assets/Scripts/2022.09.15/PlayerMove.cs"
+"Assets/Scripts/GameManager.cs"
+"Assets/Scripts/PlayerMove.cs"
+"Assets/Scripts/PlayerSensor.cs"
+"Assets/Scripts/ShowFPS.cs"
 -langversion:9.0
 
 /deterministic

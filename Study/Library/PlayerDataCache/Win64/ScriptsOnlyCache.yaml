@@ -1,8 +1,12 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-Editor.dll:
+    - TurboRename
     Assembly-CSharp.dll:
-    - Map
+    - GameManager
     - PlayerMove
+    - PlayerSensor
+    - ShowFPS
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -12,7 +16,7 @@ ScriptsOnlyBuild:
   serializedClasses: {}
   methodsToPreserve: []
   sceneClasses:
-    Assets/Scenes/2022.09.15.unity:
+    Assets/Scenes/2022.09.19.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -33,6 +37,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
@@ -42,10 +48,16 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 23074}
+      Script: {instanceID: 1678}
     - Class: 114
-      Script: {instanceID: 23076}
+      Script: {instanceID: 2480}
+    - Class: 114
+      Script: {instanceID: 5664}
+    - Class: 114
+      Script: {instanceID: 7470}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -78,6 +90,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 9ecea22684c5a910b4a67f9bbc46a751
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
   - hash:
       serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
@@ -150,6 +168,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShowFPS
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -572,6 +596,12 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
+      Hash: 28b47d6d7e0c8bd442b12836607c0d5a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerMove
+  - hash:
+      serializedVersion: 2
       Hash: 2574ac7d50617d23cdefe4ad22f5e1ad
     assemblyName: Unity.VisualScripting.State.dll
     namespaceName: Unity.VisualScripting
@@ -758,6 +788,12 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
+      Hash: f352cfd2ab64d32d91c3bfa11289a49a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerSensor
+  - hash:
+      serializedVersion: 2
       Hash: 040dd48e3a027d5424519a5fa2009df4
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -828,19 +864,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: af29d708edbd5e06f1cea086ddb179fc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Map
-  - hash:
-      serializedVersion: 2
-      Hash: e7db7ead82bbf63a0e4783ffe99fc30a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerMove
   platform: 19
   scenePathNames:
-  - Assets/Scenes/2022.09.15.unity
-  playerPath: "C:/Users/KGA_25/Documents/123123123/2022.09.15/\uC0C8 \uD3F4\uB354/2022.09.15.exe"
+  - Assets/Scenes/2022.09.19.unity
+  playerPath: C:/bigseung12/Study-Implement/Assignment/2022.09.19/Build/2022.09.19.exe
