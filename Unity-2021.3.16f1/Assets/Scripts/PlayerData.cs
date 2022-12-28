@@ -14,6 +14,8 @@ namespace TurnBasedAutoBattle
         public int BehaviourSpeedMaxValue { get { return behaviourSpeedMaxValue; } }
         public int HealthPointMinValue { get { return healthPointMinValue; } }
         public int HealthPointMaxValue { get { return healthPointMaxValue; } }
+        public int DefenseMinValue { get { return defenseMinValue; } }
+        public int DefenseMaxValue { get { return defenseMaxValue; } }
 
         [SerializeField] private int healthPointMinValue;
         [SerializeField] private int healthPointMaxValue;
@@ -21,5 +23,7 @@ namespace TurnBasedAutoBattle
         [SerializeField] private int attackPowerMaxValue;
         [SerializeField] private int behaviourSpeedMinValue;
         [SerializeField] private int behaviourSpeedMaxValue;
+        [SerializeField] private int defenseMinValue;
+        [SerializeField] private int defenseMaxValue;
     }
 }

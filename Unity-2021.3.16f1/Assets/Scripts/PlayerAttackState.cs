@@ -19,7 +19,7 @@ namespace TurnBasedAutoBattle
         {
             initialPosition = transform.position;
             elapsedTime = 0f;
-            myPlayer.Enemy.TakeDamage(myPlayer.AttackPower);
+            myPlayer.MyActionController.UpdateSkillCool();
         }
 
         public override void OnUpdate()

@@ -10,12 +10,15 @@ namespace TurnBasedAutoBattle
     public class Player : MonoBehaviour, IDamageable
     {
         public int HealthPoint { get { return healthPoint; } }
+        public int MaxHealthPoint { get { return maxHealthPoint; } }
         public int AttackPower { get { return attackPower; } }
         public int BehaviourSpeed { get { return behaviourSpeed; } }
         public Slider HealthBar { get { return healthBar; } }
         public Slider BehaviourBar { get { return behaviourBar; } }
         public Vector3 MovePoint { get { return movePoint; } }
         public Player Enemy { get { return enemy; } }
+        public PlayerActionController MyActionController { get { return myActionController; } }
+        public int DefenseValue { get { return defense; } }
 
         [SerializeField] private PlayerData playerData;
         [SerializeField] private Slider healthBar;
@@ -23,10 +26,13 @@ namespace TurnBasedAutoBattle
         [SerializeField] private TextMeshProUGUI takeDamageMessage;
         [SerializeField] private Vector3 movePoint;
         [SerializeField] private Player enemy;
+        [SerializeField] private PlayerActionController myActionController;
 
         private int healthPoint;
+        private int maxHealthPoint;
         private int attackPower;
         private int behaviourSpeed;
+        private int defense;
 
         private Dictionary<EPlayerState, PlayerState> myStates;
         private PlayerState nowState;
@@ -39,8 +45,12 @@ namespace TurnBasedAutoBattle
         private void Awake()
         {
             healthPoint = Random.Range(playerData.HealthPointMinValue, playerData.HealthPointMaxValue + 1);
+            maxHealthPoint = healthPoint;
             attackPower = Random.Range(playerData.AttackPowerMinValue, playerData.AttackPowerMaxValue + 1);
             behaviourSpeed = Random.Range(playerData.BehaviourSpeedMinValue, playerData.BehaviourSpeedMaxValue + 1);
+            defense = Random.Range(playerData.DefenseMinValue, playerData.DefenseMaxValue);
+
+            myActionController.Initialize(this);
 
             myStates = new Dictionary<EPlayerState, PlayerState>();
 
@@ -78,12 +88,36 @@ namespace TurnBasedAutoBattle
             nowState.OnEnter();
         }
 
+        public void Healing(int power)
+        {
+            healthPoint += power;
+            StartCoroutine(IncreaseHealthPoint(power));
+        }
+
+        public void AttackToTarget(int power)
+        {
+            enemy.TakeDamage(power);
+        }
+
         public void TakeDamage(int power)
         {
-            healthPoint -= power;
+            int takeDamageValue = power - defense;
+            healthPoint -= takeDamageValue;
             ChangeState(EPlayerState.TakeDamage);
             StartCoroutine(DecreaseHealthPoint(healthPoint));
-            StartCoroutine(PopUpTakeDamageMessage(power));
+            StopCoroutine(PopUpTakeDamageMessage(takeDamageValue));
+            StartCoroutine(PopUpTakeDamageMessage(takeDamageValue));
+        }
+
+        IEnumerator IncreaseHealthPoint(int targetValue)
+        {
+            float increaseSpeed = 20f;
+
+            while (healthBar.value < targetValue)
+            {
+                healthBar.value += increaseSpeed * Time.deltaTime;
+                yield return null;
+            }
         }
 
         IEnumerator DecreaseHealthPoint(int targetValue)

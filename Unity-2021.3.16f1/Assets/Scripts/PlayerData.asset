@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ba7aeeafcccdc144830fab6736d92bf, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  healthPointMinValue: 100
-  healthPointMaxValue: 100
-  attackPowerMinValue: 20
-  attackPowerMaxValue: 20
+  healthPointMinValue: 500
+  healthPointMaxValue: 500
+  attackPowerMinValue: 50
+  attackPowerMaxValue: 50
   behaviourSpeedMinValue: 20
   behaviourSpeedMaxValue: 50
+  defenseMinValue: 10
+  defenseMaxValue: 10
