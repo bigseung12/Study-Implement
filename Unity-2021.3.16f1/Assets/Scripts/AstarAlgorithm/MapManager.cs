@@ -7,20 +7,30 @@ namespace AstarAlgorithm
 {
     public class MapManager : MonoBehaviour
     {
-        [SerializeField] private GameObject tile;
+        [SerializeField] private Tile tileObject;
+
+        private List<Tile> tileList;
 
         private void Awake()
+        {
+            tileList = new List<Tile>(Define.TileTotalCount);
+
+            SpawnMap();
+        }
+
+        private void SpawnMap()
         {
             int tilePositionX;
             int tilePositionZ;
 
-            for (int i = 0; i < Define.TileCountMax; ++i)
+            for (int i = 0; i < Define.TileTotalCount; ++i)
             {
                 tilePositionX = i % Define.TileCountX;
                 tilePositionZ = i / Define.TileCountX;
 
                 Vector3 tilePosition = new Vector3(tilePositionX, 0f, tilePositionZ);
-                Instantiate(tile, tilePosition, Quaternion.identity);
+                Tile tile = Instantiate(tileObject, tilePosition, Quaternion.identity);
+                tileList.Add(tile);
             }
         }
     }
