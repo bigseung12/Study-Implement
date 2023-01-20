@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/2022.12.26 - \uD134\uC81C \uC790\uB3D9 \uC804\uD22C.unity"
     guid: 556e89e49f75a9d4a8b6ebf8a12a680c
+  - enabled: 1
+    path: "Assets/Scenes/2023.01.04 - \uB9F5\uD234.unity"
+    guid: be0e2a01f9f16e142b4d6782ae4b5b9d
   m_configObjects: {}

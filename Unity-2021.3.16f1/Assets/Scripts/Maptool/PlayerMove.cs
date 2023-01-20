@@ -1,18 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MapTool;
 
-public class PlayerMove : MonoBehaviour
+namespace MapTool
 {
-    // Start is called before the first frame update
-    void Start()
+    public class PlayerMove : MonoBehaviour
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
