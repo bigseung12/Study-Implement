@@ -8,10 +8,12 @@ namespace AstarAlgorithm
     public class Tile : MonoBehaviour
     {
         public Define.ETileType Type { get { return type; } }
+        public int Heuristics { get { return heuristics; } set { heuristics = value; } }
         
         [SerializeField] private TileResources resource;
 
         private Define.ETileType type;
+        private int heuristics = 0;
 
         private void Start()
         {
