@@ -25,6 +25,8 @@ namespace AstarAlgorithm
 
         private void ChangeTile(Define.ETileType tileType)
         {
+            type = tileType;
+
             Renderer myRenderer = GetComponent<Renderer>();
             myRenderer.material = resource.Materials[(int)tileType];
         }

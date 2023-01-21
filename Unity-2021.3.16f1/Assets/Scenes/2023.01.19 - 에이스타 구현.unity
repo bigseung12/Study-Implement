@@ -133,8 +133,9 @@ GameObject:
   m_Component:
   - component: {fileID: 57379966}
   - component: {fileID: 57379967}
+  - component: {fileID: 57379968}
   m_Layer: 0
-  m_Name: Map
+  m_Name: Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -169,6 +170,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileObject: {fileID: 4784670759847547047, guid: c886f0078528db641996463e638105e0,
     type: 3}
+--- !u!114 &57379968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57379965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c8c672286e353440943788a9425572a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1007375443
 GameObject:
   m_ObjectHideFlags: 0

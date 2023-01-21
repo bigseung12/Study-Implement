@@ -7,6 +7,8 @@ namespace AstarAlgorithm
 {
     public class MapManager : MonoBehaviour
     {
+        public List<Tile> TileList { get { return tileList; } }
+
         [SerializeField] private Tile tileObject;
 
         private List<Tile> tileList;
